@@ -10,9 +10,17 @@
     "start": "npm install && npm run gotty && pwd && ls -l && npm ls nodemon && ./gotty --ws-origin '.*' npm run bot",
     "bot": "WECHATY_LOG=verbose nodemon -w vorpel-bot.ts vorpel-bot.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbis04/vorpel-wechaty-hackernews.git"
+  },
   "keywords": [],
   "author": "Souvik Biswas <sbis1999@gmail.com>",
+  "homepage": "https://github.com/sbis04/vorpel-wechaty-hackernews",
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sbis04/vorpel-wechaty-hackernews/issues"
+  },
   "dependencies": {
     "@chatie/tsconfig": "^0.14.1",
     "cross-env": "^7.0.3",
