@@ -19,27 +19,27 @@ function onScan(qrcode: string, status: ScanStatus) {
     ].join("");
 
     log.info(
-      "VorpelBot",
+      "VorpalBot",
       "onScan: %s(%s) - %s",
       ScanStatus[status],
       status,
       qrcodeImageUrl
     );
   } else {
-    log.info("VorpelBot", "onScan: %s(%s)", ScanStatus[status], status);
+    log.info("VorpalBot", "onScan: %s(%s)", ScanStatus[status], status);
   }
 }
 
 function onLogin(user: Contact) {
-  log.info("VorpelBot", "%s login", user);
+  log.info("VorpalBot", "%s login", user);
 }
 
 function onLogout(user: Contact) {
-  log.info("VorpelBot", "%s logout", user);
+  log.info("VorpalBot", "%s logout", user);
 }
 
 const bot = new Wechaty({
-  name: "vorpel-bot",
+  name: "vorpal-bot",
   /**
    * Specify a `puppet` for a specific protocol (Web/Pad/Mac/Windows, etc).
    *
@@ -69,5 +69,5 @@ bot.use(
 
 bot
   .start()
-  .then(() => log.info("VorpelBot", "Vorpel Bot Started."))
-  .catch((e) => log.error("VorpelBot", e));
+  .then(() => log.info("VorpalBot", "Vorpal Bot Started."))
+  .catch((e) => log.error("VorpalBot", e));
