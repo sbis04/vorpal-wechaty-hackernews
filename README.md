@@ -1,2 +1,2 @@
-# vorpel-wechaty-hackernews
+# vorpal-wechaty-hackernews
 Created with CodeSandbox
