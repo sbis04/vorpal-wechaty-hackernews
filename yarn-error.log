@@ -18,16 +18,16 @@ Trace:
 
 npm manifest: 
   {
-    "name": "vorpel-bot",
+    "name": "vorpal-bot",
     "version": "1.0.0",
-    "description": "Vorpel with Wechaty",
+    "description": "Vorpal with Wechaty",
     "engines": {
       "node": ">= 12"
     },
     "scripts": {
       "gotty": "bash -x install-gotty.sh",
       "start": "npm install && npm run gotty && pwd && ls -l && npm ls nodemon && ./gotty --ws-origin '.*' npm run bot",
-      "bot": "WECHATY_LOG=verbose nodemon -w vorpel-bot.ts vorpel-bot.ts"
+      "bot": "WECHATY_LOG=verbose nodemon -w vorpal-bot.ts vorpal-bot.ts"
     },
     "keywords": [],
     "author": "Souvik Biswas <sbis1999@gmail.com>",
