@@ -9,65 +9,20 @@ import { generate } from "qrcode-terminal";
 
 const hackerNews = require("vorpal-hacker-news");
 
-function onScan(qrcode: string, status: ScanStatus) {
-  if (status === ScanStatus.Waiting || status === ScanStatus.Timeout) {
-    generate(qrcode, { small: true }); // show qrcode on console
+// TODO 1: Define the onScan function
 
-    const qrcodeImageUrl = [
-      "https://wechaty.js.org/qrcode/",
-      encodeURIComponent(qrcode)
-    ].join("");
+// TODO 2: Define the onLogin function
 
-    log.info(
-      "VorpalBot",
-      "onScan: %s(%s) - %s",
-      ScanStatus[status],
-      status,
-      qrcodeImageUrl
-    );
-  } else {
-    log.info("VorpalBot", "onScan: %s(%s)", ScanStatus[status], status);
-  }
-}
+// TODO 3: Define the onLogout function
 
-function onLogin(user: Contact) {
-  log.info("VorpalBot", "%s login", user);
-}
+// TODO 4: Define the onMessage function
 
-function onLogout(user: Contact) {
-  log.info("VorpalBot", "%s logout", user);
-}
+// TODO 5: Define the onError function
 
-const bot = new Wechaty({
-  name: "vorpal-bot",
-  /**
-   * Specify a `puppet` for a specific protocol (Web/Pad/Mac/Windows, etc).
-   *
-   * You can use the following providers:
-   *  - wechaty-puppet-hostie
-   *  - wechaty-puppet-wechat
-   *  - wechaty-puppet-padplus
-   *  - etc.
-   *
-   * Learn more about Wechaty Puppet Providers at:
-   *  https://github.com/wechaty/wechaty-puppet/wiki/Directory
-   */
+// TODO 6: Initialize the Wechaty bot
 
-  // puppet: 'wechaty-puppet-hostie',
-  puppet: "wechaty-puppet-wechat4u"
-});
+// TODO 7: Handle the bot events
 
-bot.on("scan", onScan);
-bot.on("login", onLogin);
-bot.on("logout", onLogout);
+// TODO 8: Connect with the Vorpal Hacker News API
 
-bot.use(
-  WechatyVorpal({
-    use: hackerNews
-  })
-);
-
-bot
-  .start()
-  .then(() => log.info("VorpalBot", "Vorpal Bot Started."))
-  .catch((e) => log.error("VorpalBot", e));
+// TODO 9: Start the bot
